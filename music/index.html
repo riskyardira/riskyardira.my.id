@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<link rel="shortcut icon" href="favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script data-ad-client="ca-pub-5177830239437863" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+<title>BASEBTM | INFOBOT</title>
+</head>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <!--a href="https://line.me/ti/p/~veza1007"><img src="https://i.ibb.co/rkpr4rV/Pics-Art-06-16-04-33-42.png" style="width:60px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a-->
+<div class="holder">
+	<div id="photo-holder"></div>
+</div>
+<div id="preload"></div>
+
+
+        
+
+
+  <div class="w3-display-middle" style="top: 35%;">
+    <aside class="profile-card" >
+            <header>
+                <a href="https://api.whatsapp.com/send?phone=+62895323547300&text=Halo-Bro, Saya pengguna INFOBOT"> <img src="./pictures/500.png" /> </a>
+                <h1>SOFYAN AFANDI</h1>
+                <h2>Sing Penting Heppy</h2>
+            </header>
+            <div class="profile-bio">
+                <p>Hallo Cuk</p>
+                <p>
+                    Cuman bisa ngeBot. Ngoding PYTHON, HTML, JS, Sama IoT. Ngedit cuman bisa pakai Premier Pro sama AE.
+                </p>
+            </div>
+            <ul class="profile-social-links">
+                <li>
+                    <a href="#"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/300px-LINE_logo.svg.png" /> </a>
+                </li>
+                <br>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=+62895323547300&text=Halo-Bro, Saya pengguna INFOBOT"> <img src="https://agenkuotapulsa.com/wp-content/uploads/2018/02/whatsapp-logo-png-hd-2.png" /> </a>
+                </li>
+                <br>
+                <li>
+                    <a href="#"> <img src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png" /> </a>
+                </li>
+            </ul>
+        </aside>
+    <!-- One or more source files, each referencing the same audio but in a different file format. The browser will choose the first file which it is able to play. --> 
+    
+   
+  
+</div>
+  
+  <div id="app-cover">
+  <div id="bg-artwork"></div>
+  <div id="bg-layer"></div>
+  <div id="player">
+    <div id="player-track">
+      <div id="album-name"></div>
+      <div id="track-name"></div>
+      <div id="track-time">
+        <div id="current-time"></div>
+        <div id="track-length"></div>
+      </div>
+      <div id="s-area">
+        <div id="ins-time"></div>
+        <div id="s-hover"></div>
+        <div id="seek-bar"></div>
+      </div>
+    </div>
+    <div id="player-content">
+      <div id="album-art">
+        <img src="./pictures/500.png" class="active" id="_1">
+        <img src="./pictures/500.png" id="_2">
+        <img src="./pictures/500.png" id="_3">
+        <img src="./pictures/500.png" id="_4">
+        <img src="./pictures/500.png" id="_5">
+        <img src="./pictures/500.png" id="_6">
+        <div id="buffer-box">Buffering Cok...</div>
+      </div>
+      <div id="player-controls">
+        <div class="control">
+          <div class="button" id="play-previous">
+            <i class="fas fa-backward"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-pause-button">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+        <div class="control">
+          <div class="button" id="play-next">
+            <i class="fas fa-forward"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="w3-display-bottomright w3-padding-large">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="sakura.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://codepen.io/steveg3003/pen/zBVakw"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+<script>var photoCount = 2;
+var pieceCount = 2;
+var onPhoto = 0;
+var pieceCompleteCount = 0;
+var delay;
+
+var transitions = ['center', 'random']
+var transitionType = 0;
+
+$(document).ready(function() 
+{
+	preload();
+});
+
+function preload()
+{
+	for (var i = 0; i < photoCount; i++) 
+	{
+		$('#preload').append('<img src="./pictures/' + (500 + i) + '.png">')
+	};
+	$(window).load(function() 
+	{
+		setup();
+	});
+}
+
+function setup()
+{
+	$('#photo-holder').html('');
+	for (var i = 0; i < pieceCount; i++) 
+	{
+		var newWidth = (((100-(100 / pieceCount) * i))/100) * 100; //((pieceWidth - ((pieceWidth / pieceCount) * i)) / pieceWidth) * 100;
+		var newBackgroundSize = 100 + (100-newWidth)/newWidth * 100; //100 + (100 - newWidth);
+		var newTop = ((100 / pieceCount) * i)/2;
+		
+		$('#photo-holder').append('<div class="section" id="piece'+i+'" style="top: ' + newTop + '%; left: ' + newTop + '%; width: ' + newWidth + '%; height: ' + newWidth + '%; background-size:'+newBackgroundSize+'%; background-image: url(\'./pictures/' + (500 + onPhoto) + '.png\')"></div>')
+	};
+	nextSlide(); 
+}
+
+function nextSlide()
+{
+	clearInterval(delay);
+	pieceCompleteCount = 0;
+	++onPhoto;
+	if(onPhoto >= photoCount)
+	{
+		onPhoto = 0;
+	}
+
+	for(var i=0; i < pieceCount; i++)
+	{
+		var spinDelay = 0;
+		var spin = 360;
+		var piece = $('#piece'+i);
+		
+		switch(transitions[transitionType])
+		{
+			case 'random':
+				spinDelay = Math.random()/2;
+				spin = Math.random()*360;
+				break;
+			case 'center':
+				spinDelay = (pieceCount-i)/10;
+				spin = 181;
+				break;
+		}
+		
+		TweenMax.to(piece, 1, {
+			delay: spinDelay,
+			directionalRotation: spin + '_long', 
+			onComplete: completeRotation, 
+			onCompleteParams: [piece], 
+			ease: Power4.easeIn
+		})
+	}
+}
+
+function completeRotation(piece)
+{
+	piece.css('background-image', 'url("./pictures/"' + (500 + onPhoto) + '.png)');
+	TweenMax.to(piece, 2, {
+		directionalRotation: '0_short', 
+		onComplete: finishPieceanimation, 
+		ease: Elastic.easeOut
+	})	
+}
+
+function finishPieceanimation()
+{
+	++pieceCompleteCount;
+	if(pieceCompleteCount == pieceCount)
+	{
+		delay = setInterval(nextSlide, 1000);
+	}
+}</script>
+</body>
+</html>
